@@ -2,7 +2,7 @@
 # !pip install pycaret -q
 # !pip install streamlit -q
 
-from pycaret.classification import predict_model
+from pycaret.classification import load_model, predict_model
 import streamlit as st
 
 model = load_model('diamond-pipeline')
