@@ -20,8 +20,8 @@ if st.button('Predict'):
     input_data = pd.DataFrame(
         [[input_1, input_2, input_3, input_4]],
         columns=['input_1', 'input_2', 'input_3', 'input_4'])
-    # st.write('Error from predict_model()')
-    # st.write(input_data)
+    st.write('Error from predict_model()')
+    st.write(input_data)
 
     # https://pycaret.gitbook.io/docs/get-started/functions/deploy
     prediction = predict_model(model, data=input_data)
