@@ -6,25 +6,28 @@ from pycaret.datasets import get_data
 
 iris = get_data('iris')
 
+print('\nSetup')
 clf = setup(data=iris,
             target='species',
             session_id=123,
             normalize=True,
             transformation=True)
 
-model = create_model('lr',
-                     feature_selection=True,
-                     feature_interaction=True,
-                     feature_ratio=True)
+print('\nCreate Model')
+model = create_model('lr')
+                    #  feature_selection=True,
+                    #  feature_interaction=True,
+                    #  feature_ratio=True)
 
+print('\nTune Model')
 tuned_model = tune_model(model, n_iter=50, search_library='optuna')
 
-bagged_model = ensemble_model(model, method='Bagging')
-blended_model = blend_models(estimator_list=[model1, model2, model3])
-stacked_model = stack_models(estimator_list=[model1, model2],
-                             meta_model=model3)
+# bagged_model = ensemble_model(model, method='Bagging')
+# blended_model = blend_models(estimator_list=[model1, model2, model3])
+# stacked_model = stack_models(estimator_list=[model1, model2],
+#                              meta_model=model3)
 
-interpret_model(tuned_model, plot='summary')
+# interpret_model(tuned_model, plot='summary')
 
 evaluate_model(tuned_model)
 
