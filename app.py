@@ -21,5 +21,6 @@ if st.button('Predict'):
         [[input_1, input_2, input_3, input_4]],
         columns=['input_1', 'input_2', 'input_3', 'input_4'])
     print(input_data)
-    prediction = predict_model(model, data=input_data)
-    st.write(f"The predicted output is: {prediction['Label'].iloc[0]}")
+    st.write('Button clicked')
+    # prediction = predict_model(model, data=input_data)
+    # st.write(f"The predicted output is: {prediction['Label'].iloc[0]}")
