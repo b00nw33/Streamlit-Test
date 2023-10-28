@@ -20,8 +20,10 @@ if st.button('Predict'):
     input_data = pd.DataFrame(
         [[input_1, input_2, input_3, input_4]],
         columns=['input_1', 'input_2', 'input_3', 'input_4'])
-    print(input_data)
-    st.write('Button clicked')
-    st.write(input_data)
+    # print(input_data)
+    # st.write('Button clicked')
+    # st.write(input_data)
+
+    # https://pycaret.gitbook.io/docs/get-started/functions/deploy
     prediction = predict_model(model, data=input_data)
     # st.write(f"The predicted output is: {prediction['Label'].iloc[0]}")
