@@ -2,6 +2,9 @@
 from pycaret.classification import *
 import streamlit as st
 import pandas as pd
+from pycaret.datasets import get_data
+
+iris = get_data('iris')
 
 clf = setup(data=iris,
             target='species',
