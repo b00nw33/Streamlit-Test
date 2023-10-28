@@ -7,9 +7,9 @@ import streamlit as st
 import pandas as pd
 
 model = load_model('diamond-pipeline')
-st.title('Your Model Prediction App')
 
 # Collect user input
+st.title('Model Prediction App')
 input_1 = st.number_input('Input 1', min_value=0.0, max_value=10.0)
 input_2 = st.number_input('Input 2', min_value=0.0, max_value=10.0)
 input_3 = st.number_input('Input 3', min_value=0.0, max_value=10.0)
@@ -20,5 +20,6 @@ if st.button('Predict'):
     input_data = pd.DataFrame(
         [[input_1, input_2, input_3, input_4]],
         columns=['input_1', 'input_2', 'input_3', 'input_4'])
+    print(input_data)
     prediction = predict_model(model, data=input_data)
     st.write(f"The predicted output is: {prediction['Label'].iloc[0]}")
