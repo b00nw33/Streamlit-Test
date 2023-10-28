@@ -20,7 +20,7 @@ model = create_model('lr')
                     #  feature_ratio=True)
 
 print('\nTune Model')
-tuned_model = tune_model(model, n_iter=50, search_library='optuna')
+tuned_model = tune_model(model, n_iter=50)
 
 # bagged_model = ensemble_model(model, method='Bagging')
 # blended_model = blend_models(estimator_list=[model1, model2, model3])
