@@ -4,6 +4,7 @@
 
 from pycaret.classification import load_model, predict_model
 import streamlit as st
+import pandas as pd
 
 model = load_model('diamond-pipeline')
 st.title('Your Model Prediction App')
