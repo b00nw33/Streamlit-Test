@@ -1,6 +1,6 @@
 # https://medium.com/@abhisheky127/mastering-pycaret-and-streamlit-a-comprehensive-guide-to-building-and-deploying-machine-learning-71b28a22655e
-!pip install pycaret -q
-!pip install streamlit -q
+# !pip install pycaret -q
+# !pip install streamlit -q
 
 from pycaret.classification import predict_model
 import streamlit as st
