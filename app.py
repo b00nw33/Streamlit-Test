@@ -31,9 +31,14 @@ tuned_model = tune_model(model, n_iter=50)
 
 evaluate_model(tuned_model)
 
+# finalize the model
+final_best = finalize_model(tuned_model)
+
+# save model to disk
+save_model(final_best, 'diamond-pipeline')
 
 def main():
-    model = load_model('tuned_model')
+    model = load_model('diamond-pipeline')
     st.title('Your Model Prediction App')
 
     # Collect user input
